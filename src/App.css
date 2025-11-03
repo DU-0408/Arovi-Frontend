@@ -402,7 +402,7 @@ body {
 
 .chat-header {
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  /* border-bottom: 1px solid #e5e7eb; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1538,8 +1538,8 @@ button.analyze-btn:disabled {
 }
 
 .App.dark-mode .sidebar-footer {
-  background: #40414f;
-  border-top-color: #565869;
+  background: #1a1a1a;
+  border-top-color: #fff;
 }
 
 .App.dark-mode .user-info:hover {
@@ -1551,12 +1551,12 @@ button.analyze-btn:disabled {
 }
 
 .App.dark-mode .main-chat {
-  background: #343541;
+  background: #1a1a1a;
 }
 
 .App.dark-mode .chat-header {
-  background: #343541;
-  border-bottom-color: #4a4b4d;
+  background: #1a1a1a;
+  border-bottom-color: #fff;
 }
 
 .App.dark-mode .chat-header-content h1,
@@ -1583,11 +1583,11 @@ button.analyze-btn:disabled {
 }
 
 .App.dark-mode .message.user {
-  background: #343541;
+  background: #1a1a1a;
 }
 
 .App.dark-mode .message.ai {
-  background: #444654;
+  background: #1a1a1a;
 }
 
 .App.dark-mode .user-message {
@@ -1605,40 +1605,45 @@ button.analyze-btn:disabled {
 .App.dark-mode .ai-message h5,
 .App.dark-mode .ai-message h6 {
   color: #ececf1;
-  border-bottom-color: #4a4b4d;
+  border: none;
 }
 
 .App.dark-mode .ai-message strong {
   color: #ececf1;
+  border: none;
 }
 
 .App.dark-mode .ai-message code {
   background: #40414f;
   color: #ececf1;
+  border: none;
 }
 
 .App.dark-mode .ai-message pre {
   background: #40414f;
   border-color: #565869;
+  border: none;
 }
 
 .App.dark-mode .ai-message pre code {
   color: #ececf1;
+  border: none;
 }
 
 .App.dark-mode .ai-message blockquote {
   color: #8e8ea0;
   background: rgba(59, 130, 246, 0.1);
+  border: none;
 }
 
 .App.dark-mode .input-container {
-  background: #343541;
-  border-top-color: #4a4b4d;
+  background: #1a1a1a;
+  border: none;
 }
 
 .App.dark-mode .input-wrapper {
-  background: #40414f;
-  border-color: #565869;
+  background: #202020;
+  border: none;
 }
 
 .App.dark-mode .text-input {
@@ -1689,8 +1694,8 @@ button.analyze-btn:disabled {
 }
 
 .App.dark-mode .prescription-form {
-  background: #40414f;
-  border-color: #565869;
+  background: #1f1f1f;
+  border: none;
 }
 
 .App.dark-mode .prescription-form h3 {
@@ -1702,7 +1707,7 @@ button.analyze-btn:disabled {
 }
 
 .App.dark-mode .input-group input {
-  background: #343541;
+  background: #2f2f2f;
   border-color: #565869;
   color: #ececf1;
 }
@@ -2375,15 +2380,15 @@ button.analyze-btn:disabled {
 .App.dark-mode .language-popup,
 .App.dark-mode .language-selector-modal,
 .App.dark-mode .settings-modal {
-  background: #40414f;
-  border-color: #565869;
+  background: #1a1a1a;
+  border: none;
 }
 
 .App.dark-mode .language-popup-header,
 .App.dark-mode .language-selector-header,
 .App.dark-mode .settings-header {
-  background: #40414f;
-  border-bottom-color: #565869;
+  background: #1a1a1a;
+  border-bottom-color: #fff;
 }
 
 .App.dark-mode .language-popup-header h3,

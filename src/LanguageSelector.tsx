@@ -31,7 +31,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ onLanguageSelect, i
       <div className="language-selector-modal" onClick={(e) => e.stopPropagation()}>
         <div className="language-selector-header">
           <h2>🌍 Select Your Language</h2>
-          <p>Choose your preferred language for the app</p>
           {onClose && (
             <button className="close-btn" onClick={onClose}>×</button>
           )}

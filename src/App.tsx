@@ -8,7 +8,7 @@ import LanguageSelector from './LanguageSelector';
 import Settings from './Settings';
 import { languages, Language, getTranslation } from './languages';
 import { DarkModePreference, getEffectiveDarkMode, subscribeToSystemDarkMode } from './utils/darkMode';
-import './App.css';
+import "./App.css";
 
 interface Message {
   id: string;
@@ -65,7 +65,7 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // Set axios base URL from environment variable
-    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'https://arovi-backend.onrender.com';
+    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
     axios.defaults.baseURL = apiBaseUrl;
     
     const token = localStorage.getItem('access_token');
