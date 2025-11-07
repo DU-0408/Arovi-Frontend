@@ -1,5 +1,5 @@
 module.exports = {
-    testEnvironment: 'jisdom',
+    testEnvironment: 'jsdom',
     moduleNameMapper: {
         '^axios$': 'axios/dist/node/axios.cjs',
     },
