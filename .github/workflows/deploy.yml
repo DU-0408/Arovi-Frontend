@@ -58,3 +58,4 @@ jobs:
                     echo "waiting frontend... ($i)"; sleep 2
                 done
                 echo "frontend not reachable"; exit 1  
+                
