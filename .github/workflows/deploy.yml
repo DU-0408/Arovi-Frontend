@@ -1,0 +1,60 @@
+name: Frontend CI/CD (Self Hosted)
+
+on:
+    push:
+        branches: [ main ]
+    workflow_dispatch: {}
+
+jobs:
+    build_deloy:
+        runs-on: self-hosted
+
+        env:
+            APP_ROOT: /srv/frontend
+            RELEASES: /srv/frontend/releases
+            CURRENT: /srv/frontend/current
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Use Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+                cache: 'npm'
+
+            - name: Install deps
+              run: npm ci
+
+            - name: Lint & Test (optional)
+              run: |
+                npm run lint --if-present
+                npm test --if-present
+
+            - name: Build
+              run: |
+                npm run build
+                if [ -d "dist" ]; then echo "OUTPUT=dist" >> $GITHUB_ENV; fi 
+                if [ -d "build" ]; then echo "OUTPUT=build" >> $GITHUB_ENV; fi
+                [ -n "${OUTPUT:-}" ] || { echo "Could not find dist/ or build/"; exit 1 }
+
+            - name: Create release & copy
+              run: |
+                set -euo pipefail
+                NEW_RELEASE="${RELASES}/${GITHUB_SHA}"
+                sudo -u app mkdir -p "$NEW_RELEASE"
+                sudo rsync -a --delete "${OUTPUT}/" "$ENV_RELEASE/"
+                sudo -u app ln -sfn "NEW_RELEASE" "$CURRENT"
+                ls -l "$APP_ROOT" && ls -l "$CURRENT" | head -5
+
+            - name: Reload Nginx
+              run: sudo systemctl reload Nginx
+
+            - name: Smoke test (local)
+              run: |
+                for i in {1..20}; do
+                    curl -fsS "http://127.0.0.1/" > /dev/null && exit 0
+                    echo "waiting frontend... ($i)"; sleep 2
+                done
+                echo "frontend not reachable"; exit 1  
