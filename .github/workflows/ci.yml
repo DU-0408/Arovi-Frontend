@@ -24,7 +24,7 @@ jobs:
 
       - name: Build & Push Frontend Image
         env:
-          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
+          REACT_APP_API_BASE_URL: ${{ secrets.REACT_APP_API_BASE_URL }}
         run: |
           IMAGE=ghcr.io/${{ github.repository }}
           IMAGE=${IMAGE,,}
