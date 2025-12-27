@@ -24,7 +24,7 @@ jobs:
 
       - name: Build & Push Frontend Image
         run: |
-          IMAGE=ghcr.io/${{ github.repository_owner }}/arovi-frontend
+          IMAGE=ghcr.io/${{ github.repository }}
           IMAGE=${IMAGE,,}
           TAG=${{ github.sha }}
 
