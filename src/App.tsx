@@ -65,7 +65,7 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // Set axios base URL from environment variable
-    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
+    const apiBaseUrl = process.env.VITE_API_BASE_URL || 'http://localhost:8000';
     axios.defaults.baseURL = apiBaseUrl;
     
     const token = localStorage.getItem('access_token');
