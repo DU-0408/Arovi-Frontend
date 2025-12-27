@@ -29,6 +29,7 @@ jobs:
       - name: Build & Push Frontend Image
         run: |
           IMAGE=ghcr.io/${{ github.repository_owner }}/arovi-frontend
+          IMAGE=${IMAGE,,}
           TAG=${{ github.sha }}
 
           docker build -t $IMAGE:$TAG .
