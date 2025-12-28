@@ -299,4 +299,4 @@ For questions or issues:
 
 **Built with ❤️ for better pediatric healthcare**
 
-*Visit [Arovi](https://arovi-one.vercel.app/) to experience the future of pediatric health assistance.* 
+*Visit [Arovi](https://arovi.udhomelab.dpdns.org/) to experience the future of pediatric health assistance.* 
