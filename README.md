@@ -2,7 +2,7 @@
 
 A comprehensive AI-powered pediatrician assistant that provides health guidance, medication analysis, and prescription review for parents and caregivers. Built with modern web technologies and designed with a ChatGPT-like interface.
 
-🌐 **Live Demo**: [https://arovi-one.vercel.app/](https://arovi-one.vercel.app/)
+🌐 **Live Demo**: [https://arovi-one.vercel.app/](https://arovi.udhomelab.dpdns.org/)
 
 ## 🚀 Features
 
